@@ -54,7 +54,7 @@
 
             <!-- Nav Item - Role -->
             <li class="nav-item">
-                <a class="nav-link" href="role">
+                <a class="nav-link" href="roles">
                     <i class="fas fa-fw fa-user-shield"></i>
                     <span>Role</span>
                 </a>
@@ -62,7 +62,7 @@
 
             <!-- Nav Item - Customer Data -->
             <li class="nav-item">
-                <a class="nav-link" href="customerData">
+                <a class="nav-link" href="customer_data">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Data Customer</span>
                 </a>

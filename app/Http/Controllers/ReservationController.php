@@ -14,8 +14,8 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        $reservation = Reservation::get();
-        return $reservation;
+        $data = Reservation::paginate(10);
+        return view('reservation', compact('data'));
     }
 
     /**
@@ -96,48 +96,6 @@ class ReservationController extends Controller
         isset($request->payment_methode) && $reservation->payment_method= $request->payment_method;
         $reservation->save();
         return $reservation;
-
-        /*
-        if (isset($request->user_id)) {
-            $reservation->user_id = $request->user_id;
-        }
-
-        if (isset($request->id_schedule)) {
-            $reservation->id_schedule = $request->id_schedule;
-        }
-
-        if (isset($request->number_of_seats)) {
-            $reservation->number_of_seats = $request->number_of_seats;
-        }
-
-        if (isset($request->reservation_code)) {
-            $reservation->reservation_code = $request->reservation_code;
-        }
-
-        if (isset($request->reservation_date)) {
-            $reservation->reservation_date = $request->reservation_date;
-        }
-
-        if (isset($request->reservation_duration)) {
-            $reservation->reservation_duration = $request->reservation_duration;
-        }
-
-        if (isset($request->payment_date)) {
-            $reservation->payment_date = $request->payment_date;
-        }
-
-        if (isset($request->payment)) {
-            $reservation->payment = $request->payment;
-        }
-
-        if (isset($request->payment_status)) {
-            $reservation->payment_status = $request->payment_status;
-        }
-
-        if (isset($request->set_payment_method)) {
-            $reservation->set_payment_method = $request->set_payment_method;
-        }
-        */
        
     }
 

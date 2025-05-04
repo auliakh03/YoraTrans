@@ -9,8 +9,8 @@ class RoleController extends Controller
 {
     public function index()
     {
-        $roles = roles::all();
-        return view('roles.index', compact('roles'));
+        $data = roles::paginate(10);
+        return view('roles', compact('data'));
     }
     
     public function create()

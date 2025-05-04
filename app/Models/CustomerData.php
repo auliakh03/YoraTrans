@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CustomerData extends Model
 {
     use HasFactory;
-    protected $table = 'bus_type';
+    protected $table = 'customer_data';
     protected $fillable = ['id_customer','full_name','email','phone_number','address',];
     protected $dates = ['created_at', 'update_at'];
 }

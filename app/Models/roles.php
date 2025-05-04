@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class roles extends Model
 {
     use HasFactory;
-    protected $table = 'bus_type';
+    protected $table = 'roles';
     protected $fillable = ['name'];
     protected $dates = ['created_at', 'update_at'];
 }

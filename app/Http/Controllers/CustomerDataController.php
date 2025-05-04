@@ -14,12 +14,8 @@ class CustomerDataController extends Controller
      */
     public function index()
     {
-        $customer_data= CustomerData::all();
-        return view('customerData', compact('customer_data'));
-        /*
-        $customer_data = CustomerData::get();
-        return $customer_data;
-        */
+        $data = CustomerData::paginate(10);
+        return view('customer_data', compact('data'));
     }
 
     /**
